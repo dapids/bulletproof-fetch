@@ -2,18 +2,14 @@
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
 Fetches made easy.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[build-badge]: https://img.shields.io/travis/dapids/bulletproof-fetch/master.png?style=flat-square
+[build]: https://travis-ci.org/dapids/bulletproof-fetch
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
 
 ## What is this package about?
 `bulletproof-fetch` is a [whatwg/fetch](https://fetch.spec.whatwg.org) abstraction and factory.
@@ -35,14 +31,14 @@ It's `false` otherwise.
 It contains the plain [whatwg/fetch](https://fetch.spec.whatwg.org) response.
 
 #### payload
-It contains the payload extracted from the response if we provided a function to extract it.
+It contains the payload extracted from the response if we provide a function to extract it.
 It is `undefined` otherwise.
 
 ### The `createFetch` factory
 The `createFetch` factory allows you to create different `fetch` functions with different default values and payload extraction behaviours.
 
 #### Example
-Create a new fetch flavour for our domain:
+Create a new flavour of the fetch function:
 ```JavaScript
 const extractPayload = response => response.json()
 const jsonFetch = createFetch({
@@ -52,7 +48,7 @@ const jsonFetch = createFetch({
 }, extractPayload)
 ```
 
-Now all the following fetch function fancy:
+Now all the following fetch functions fancy:
 - the header `'Content-Type': 'application/json'`.
 - a `payload` property in the yielded object containing the result of `response.json()`.
 ```JavaScript
@@ -63,3 +59,21 @@ console.log(ok) // true
 console.log(payload) // { userId: 1, id: 1, title: delectus aut autem, completed: false }
 console.log(response) // the plain response object
 ```
+
+## Installation
+### Yarn
+```JavaScript
+yarn add bulletproof-fetch
+```
+
+### NPM
+```JavaScript
+npm install --save bulletproof-fetch
+```
+
+## Usage
+### Abstraction
+#### Example
+
+### Factory
+#### Example

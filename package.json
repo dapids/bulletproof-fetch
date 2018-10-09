@@ -11,14 +11,14 @@
   "scripts": {
     "build": "nwb build-web-module",
     "clean": "nwb clean-module",
-    "prepublishOnly": "npm run build",
-    "test": "nwb test",
-    "test:coverage": "nwb test --coverage",
-    "test:watch": "nwb test --server"
+    "test": "echo 'Please write some tests'"
   },
   "dependencies": {},
   "devDependencies": {
-    "nwb": "0.23.x"
+    "jest": "23.6.0",
+    "jest-fetch-mock": "1.6.6",
+    "nwb": "0.23.x",
+    "regenerator-runtime": "0.12.1"
   },
   "author": "David Sorrentino",
   "homepage": "https://github.com/dapids/bulletproof-fetch",
