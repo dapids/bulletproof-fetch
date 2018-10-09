@@ -1,13 +1,12 @@
 {
   "name": "bulletproof-fetch",
-  "version": "1.0.0",
-  "description": "Describe bulletproof-fetch here",
+  "version": "0.1.0",
+  "description": "Fetches made easy",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
     "es",
-    "lib",
-    "umd"
+    "lib"
   ],
   "scripts": {
     "build": "nwb build-web-module",
@@ -17,13 +16,12 @@
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "nwb": "0.23.x"
   },
-  "author": "",
-  "homepage": "",
+  "author": "David Sorrentino",
+  "homepage": "https://github.com/dapids/bulletproof-fetch",
   "license": "MIT",
-  "repository": ""
+  "repository": "https://github.com/dapids/bulletproof-fetch.git"
 }
