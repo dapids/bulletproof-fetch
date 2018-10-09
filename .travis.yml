@@ -1,16 +1,18 @@
 sudo: false
-
 language: node_js
 node_js:
-  - 10
-
-before_install:
-  - npm install codecov.io coveralls
-
-after_success:
-  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-
-branches:
-  only:
-    - master
+- 10
+before_deploy:
+- yarn build
+deploy:
+  api_key:
+    secure: V+K7I/97lI0Yyaa4oV92Gtcvgva8a3wOxiu/YpQPtSCDCfAKM2wmeWmLaB/8tyKK0XESW/gcr4kvzXlGIdu6Cq49dV5pztS0W3jpzYYvGrEopNp5hPqBzlcNtlWhmAbp/oLfJv3UvnKRVfp1cheHAagHpqHBLusBuvb3ZNY6w0CWOToRu/moF6KKEg6NSI4UNEAzga8pmimxHmLq3QqKehAid5rXZPsvy5FleNyAzmJAELv2uwpmbVVsPT5obIJvz5HQNhxjrCSgnF4LdSy/258kVonTpkeUiVng8rVQpEw4pt6B1dvhN9VbuXlJ0eUil+UAr7qc4e8jgmbIDO9T/rckaC7GmV88N3+S43FG9yiwGW2XPobhwTPjRPjjXYTalFLy848FsIPV8k+PjoVuWuDJzWh0PBa4w3Sc7Q7u68KF9mQuIN17B01cTYsGLFPnl5tOhOc//x25YFqZVgOxzsyr2ccaRkGo6te6jiw5/IpQzeA4eAHuyv7mQoCtRrC0DFuRXKY3OFXbIievcBnUzkGMQIobQvQOkP4h4tnsaP+XdRjHX2GTRJLhvOZ2CRUoV9WVRJ5Bupz4c+2UrMofy6hO/diffcUhhWFB36uNpi0GVHUDzIyui1+QzD64aNBx2F6keSmZK5M1BvtF3zJl41VCcdHolkUIomJ2jCf2/x8=
+  email: me@davidsorrentino.com
+  file:
+    - es/**/*
+    - lib/**/*
+  file_glob: true
+  provider: npm
+  skip_cleanup: true
+  on:
+    tags: true
