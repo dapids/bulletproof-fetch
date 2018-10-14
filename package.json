@@ -1,6 +1,6 @@
 {
   "name": "bulletproof-fetch",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Fetches made easy",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,7 +13,9 @@
     "clean": "nwb clean-module",
     "test": "echo 'Please write some tests'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "6.26.0"
+  },
   "devDependencies": {
     "jest": "23.6.0",
     "jest-fetch-mock": "1.6.6",
