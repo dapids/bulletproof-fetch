@@ -74,6 +74,7 @@ npm install --save bulletproof-fetch
 ## Usage
 ### Abstraction
 #### Example
+[![Edit xrk970594w](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/xrk970594w)
 
 ### Factory
 #### Example
